@@ -1,0 +1,33 @@
+Виртуальное окружение(ВО) - папка для библеотек
+
+python -m venv venv - создание ВО
+или
+py -m venv venv
+
+
+
+venv/Scripts/activate - Включение ВО
+(если ошибка:
+    1- В PowerShell от имени администратора
+    2- Set - ExecutionPolicy RemoteSigned
+    3- A 
+)
+
+pip install django - скачать django
+
+django-admin startproject <name> . - создать проект 
+
+py manage.py runserver - запуск
+http://127.0.0.1:8000/ - локальный сервер
+
+web app - отдельная логическая часть овечающая за отдельный функционал
+например vk.com:
+    -вход регистрация
+    -чат 
+    -гл. страница
+    -видео
+    ...
+
+py manage.py startapp <name> - создать веб приложение
+
+повторное включение ВО при входе: venv/Scripts/Activate 
