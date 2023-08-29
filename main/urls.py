@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 #Маршрутизатор - по запросу user'a дает задачу views.py
-from django.contrib import admin
+from django.contrib import admin    
 from django.urls import path,include
 
 from add.views import index
@@ -27,7 +27,7 @@ from app_lesson_4.views import homework
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('home/',index)
+    path('',index),
     path('',include('add.urls')),
-     path('lesson_4/',homework)
+    path('lesson_4/',homework)
 ]

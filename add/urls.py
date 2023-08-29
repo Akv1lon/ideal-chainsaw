@@ -18,10 +18,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import index
+from .views import top_sellers
 
 # urlpatterns - список с ссылками
 # path - создает ссылку и указывает views
 
 urlpatterns = [
-    path('',index)
+    path('',index, name='main-page'),
+    path('top-sellers.html/', top_sellers, name='top-sellers')
 ]

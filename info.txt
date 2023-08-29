@@ -30,4 +30,10 @@ web app - отдельная логическая часть овечающая 
 
 py manage.py startapp <name> - создать веб приложение
 
+python manage.py migrate
+
 повторное включение ВО при входе: venv/Scripts/Activate 
+
+При добавления tamplates в tamplates в settings пишется -
+'DIRS': [Path.joinpath(BASE_DIR, 'templates')]
+
