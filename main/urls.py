@@ -17,10 +17,12 @@ Including another URLconf
 #Маршрутизатор - по запросу user'a дает задачу views.py
 from django.contrib import admin    
 from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
 
 from add.views import index
 from app_lesson_4.views import homework
-
+ 
 # include - функция для подключения других маршрутизаторов
 # urlpatterns - список с ссылками
 # path - создает ссылку и указывает views
@@ -31,3 +33,7 @@ urlpatterns = [
     path('',include('add.urls')),
     path('lesson_4/',homework)
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    
