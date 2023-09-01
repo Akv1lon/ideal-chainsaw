@@ -25,7 +25,7 @@ class AdvertForm(ModelForm):
     
     def clean_title(self):
         title = self.cleaned_data.get('title')
-        if not '?' in title:
+        if not '?' in title[0]:
             return title 
         else:
             raise forms.ValidationError(
