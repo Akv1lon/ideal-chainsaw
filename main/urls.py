@@ -31,7 +31,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index),
     path('',include('add.urls')),
-    path('lesson_4/',homework)
+    path('lesson_4/',homework),
+    path('myauth/', include('app_auth.urls')),
+    
 ]
 
 if settings.DEBUG:

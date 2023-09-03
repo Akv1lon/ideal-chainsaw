@@ -51,9 +51,3 @@ class Advert(models.Model):
     class Meta:
         db_table='advertisements'
     
-    def validate(self, title):
-        raise ValidationError(
-          _('Invalid value: %(value)s'),
-          code='invalid',
-          params={'value' : '?'}
-     )

@@ -38,7 +38,8 @@ INSTALLED_APPS = [                         #Здесь новые web-apps
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'add',
-    'app_lesson_4'
+    'app_lesson_4',
+    'app_auth',
     
 ]
 
